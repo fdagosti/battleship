@@ -2,8 +2,10 @@ import battleship
 
 def launchGame():
 
-	boardRow = list('OOOOO')
-	board = [list(boardRow),list(boardRow),list(boardRow),list(boardRow),list(boardRow)]
+	open('conf.txt')
+
+	boardRow = ['O' for i in range(nRow)]
+	board = [list(boardRow) for i in range(nCol)]
 
 	print("------- BattleShip V0.1 --------")
 
