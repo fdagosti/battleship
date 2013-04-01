@@ -2,7 +2,9 @@ import battleship
 
 def launchGame():
 
-	open('conf.txt')
+
+	nRow = 5
+	nCol = 6
 
 	boardRow = ['O' for i in range(nRow)]
 	board = [list(boardRow) for i in range(nCol)]
