@@ -11,9 +11,7 @@ def launchGame():
 	nRow = int(re.sub( r"\D", "", f[0]))
 	nCol = int(re.sub( r"\D", "", f[1]))
 
-	boardRow = ['O'] * nRow
-	board = [list(boardRow) for i in range(nCol)]
-
+	board = battleship.createBoard(nRow,nCol)
 	print("------- BattleShip V0.1 --------")
 
 

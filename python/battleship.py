@@ -24,3 +24,13 @@ def hasShipBeenFound(board, row, col):
 		print("Missed")
 		printBoard(board)
 		return False
+
+def createBoard(nRow, nCol):
+	if nRow <= 0:
+		return []
+
+	if nCol <=0:
+	 	return [[]]
+
+	colRow = ['O'] * nCol
+	return [list(colRow) for i in range(nRow)]
