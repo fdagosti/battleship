@@ -12,7 +12,8 @@ def addHiddenShip(board):
 	
 
 def hasShipBeenFound(board, row, col):
-	if (0 > row >= len(board)) or (0 > col >= len(board[0])):
+	# print("len board = "+str(len(board))+" len of col = "+str(len(board[0]))+" row and col = "+str(row)+" "+str(col))
+	if not ((0 <= row < len(board)) and (0 <= col < len(board[0]))):
 		print("You are out of the ocean !!")
 		return False
 	elif board[row][col] == 'X':

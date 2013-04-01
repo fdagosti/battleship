@@ -1,2 +1,2 @@
-nRow = 5
-nCol = 6
+5 # Rows
+6 # cols

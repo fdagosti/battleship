@@ -3,10 +3,17 @@ import battleship
 def launchGame():
 
 
-	nRow = 5
-	nCol = 6
+	# nRow = 5
+	# nCol = 6
 
-	boardRow = ['O' for i in range(nRow)]
+	f = list(open("conf.txt"))
+	
+	seq_type = type(f[0])
+	
+	nRow = int(filter(seq_type.isdigit, f[0]))
+	nCol = int(filter(seq_type.isdigit, f[1]))
+
+	boardRow = ['O'] * nRow
 	board = [list(boardRow) for i in range(nCol)]
 
 	print("------- BattleShip V0.1 --------")
