@@ -1,4 +1,4 @@
-import battleship
+import battleship, re
 
 def launchGame():
 
@@ -8,10 +8,8 @@ def launchGame():
 
 	f = list(open("conf.txt"))
 	
-	seq_type = type(f[0])
-	
-	nRow = int(filter(seq_type.isdigit, f[0]))
-	nCol = int(filter(seq_type.isdigit, f[1]))
+	nRow = int(re.sub( r"\D", "", f[0]))
+	nCol = int(re.sub( r"\D", "", f[1]))
 
 	boardRow = ['O'] * nRow
 	board = [list(boardRow) for i in range(nCol)]
